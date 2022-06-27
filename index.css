@@ -71,6 +71,7 @@ body {
   width: 100%;
   height: 560px;
   border-bottom: 5px dashed #5f2d2e;
+  border-top: 3px solid #5f2d2e ;
   position: relative;
   text-align: center;
 }
@@ -121,3 +122,5 @@ body {
   font-size: 40px;
   color: #674b25;
 }
+
+/* update */
