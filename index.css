@@ -99,7 +99,7 @@ body {
 .text-container {
   margin: 30px auto 30px auto;
   width: 70%;
-  height: 300px;
+  min-height: 300px;
   background-color: #e9cd95ee;
   display: flex;
   justify-content: center;
