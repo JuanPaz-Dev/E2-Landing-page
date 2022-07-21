@@ -1,32 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url(/assets/pattern-donut.jpg);
-  background-size: 50%;
   min-height: 100vh;
   font-family: "DM Serif Display", serif;
   font-size: 25px;
 }
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .header {
   width: 100%;
   height: 80px;
   padding: 0px 50px;
-  background-color: #ffffff;
+  background-color: transparent;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  position: sticky;
+  position: absolute;
   top: 0;
+  gap: 90px;
 }
 
 .header .logo {
@@ -58,55 +56,231 @@ main {
 
 .navbar-link {
   text-decoration: none;
-  color: #af772e;
-  font-size: 15px;
+  transition: color 1s;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 600;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 0px 0px 3px rgb(0 0 0 / 88%);
+}
+
+.navbar-link:hover {
+  transition: color 1s;
+  color: #00d0ff;
+  text-shadow: none;
 }
 
 #hero {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 80px);
-  border-bottom: 5px dashed #5f2d2e;
-  border-top: 3px solid #5f2d2e;
-  background-image: url("./assets/header-donut.jpg");
+  min-height: 100vh;
+  background-image: url("./assets/img-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .hero-presentation {
+  margin-left: 30px;
   color: #ffffff;
+  transition: color 1s;
   font-size: 95px;
   font-family: "Playfair Display", serif;
   text-shadow: 0px 0px 10px rgb(0 0 0 / 88%);
 }
 
-.about-us-card {
-  margin: 30px auto 30px auto;
+.hero-presentation:hover {
+  transition: color 1s;
+  color: #00d0ff;
+}
+
+#about-target-container {
   padding: 0 10px 0 10px;
-  width: 70%;
+  min-height: 100vh;
+  background-image: url(assets/img-about-us.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  box-shadow: 50px 0 20px 0 rgb(0 0 0 / 88%);
+}
+.about {
+  margin-top: 25px;
+}
+.about,
+.target {
+  width: 40%;
   min-height: 170px;
-  background-color: #e9cd95ee;
+  background-color: transparent;
   border-radius: 20px;
   box-shadow: 4px 7px 5px 4px rgba(120, 120, 120, 0.55);
   display: flex;
-  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 35px;
 }
 
-.about-us-card h2 {
-  margin-top: 30px;
-  color: #444444;
+.about h2,
+.target h3 {
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 217, 237);
   text-transform: capitalize;
   font-family: monospace;
   font-size: 20px;
 }
 
-.about-us-card p {
-  display: flex;
+.about p,
+.target p {
+  margin-left: 10px;
+  margin-top: 20px;
   font-size: 16px;
-  color: #674b25;
+  color: #ffffff;
+}
+
+#benefits {
+  width: 100%;
+  min-height: 40vh;
+  background-color: #ff7fcc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 50px 0 20px 0 rgb(0 0 0 / 88%);
+}
+i {
+  color: #ffffff;
+}
+
+#benefits h2 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.benefits-delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.benefits-payment,
+.benefits-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.benefits-payment,
+.benefits-site span {
+  font-size: 20px;
+  color: rgb(18, 36, 51);
+}
+
+.h2-span-column {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#products-container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(assets/img-products.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 88%);
+}
+
+.product-one,
+.product-two {
+  margin-right: 25px;
+  width: 25%;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.851);
+  border-radius: 10px;
+  box-shadow: 5px 8px 5px -2px rgba(0, 0, 0, 0.35);
+}
+
+#contact-us-container {
+  box-shadow: 10px 0 20px 0 rgb(0 0 0 / 88%);
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(assets/img-contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contact-us-container h2 {
+  margin-top: 50px;
+  color: #ff2541;
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+
+#contact-us-container span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Playfair Display", serif;
+  color: #ff2541;
+}
+
+.contact-us i {
+  color: red;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.social-networks {
+  display: flex;
+  gap: 20px;
+}
+
+.social-networks i {
+  color: red;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: #63c8cf;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 88%);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation h1,
+.payments-footer h1 {
+  color: white;
+  font-size: 25px;
+}
+.navigation-links span {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.navigation-links a {
+  text-decoration: none;
 }

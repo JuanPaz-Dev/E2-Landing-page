@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <title>E2: Landing page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>La Big Dona</title>
   </head>
   <body>
     <header class="header">
@@ -13,8 +18,15 @@
       <nav class="navbar">
         <ul>
           <li><a class="navbar-link" href="#hero">INICIO</a></li>
-          <li><a class="navbar-link" href="#">GALERIA</a></li>
-          <li><a class="navbar-link" href="#">CONTACTO</a></li>
+          <li>
+            <a class="navbar-link" href="#about-target-container">NOSOTROS</a>
+          </li>
+          <li>
+            <a class="navbar-link" href="#products-container">PRODUCTOS</a>
+          </li>
+          <li>
+            <a class="navbar-link" href="#contact-us-container">CONTACTO</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -22,7 +34,9 @@
       <section id="hero">
         <h1 class="hero-presentation">La Big Dona</h1>
       </section>
-      <section class="about-us-card">
+    </main>
+    <section id="about-target-container">
+      <div class="about">
         <h2>Sobre nosotros</h2>
         <p>
           Somos "Big Dona" lideres en la venta de donas en Latinoamerica.
@@ -30,7 +44,90 @@
           Uruguay, Colombia, Ecuador, Brasil, Paraguay, Peru. Ofreciendo asi una
           gran variedad de productos a nuestros clientes
         </p>
-      </section>
-    </main>
+      </div>
+      <div class="target">
+        <h3>Nuestro objetivo</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+          error voluptatibus labore temporibus repellendus eum im
+        </p>
+      </div>
+    </section>
+    <section id="benefits">
+      <div class="benefits-delivery">
+        <i class="fa-solid fa-truck-arrow-right"></i>
+        <h2>Envios a todo el pais</h2>
+      </div>
+      <div class="benefits-payment">
+        <i class="fa-solid fa-credit-card"></i>
+        <div class="h2-span-column">
+          <h2>Hasta 3 cuotas sin interes</h2>
+          <span>Conoce las promociones</span>
+        </div>
+      </div>
+      <div class="benefits-site">
+        <i class="fa-solid fa-lock"></i>
+        <div class="h2-span-column">
+          <h2>Sitio seguro</h2>
+          <span>Protegemos tus datos</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="products-container">
+      <div class="product-one"></div>
+      <div class="product-two"></div>
+    </section>
+    <section id="contact-us-container">
+      <div class="contact-us">
+        <h2>Contactanos</h2>
+        <span><i class="fa-solid fa-location-dot"></i>Calle falsa 123</span>
+        <span><i class="fa-solid fa-envelope"></i>callefalsa123@gmail.com</span>
+        <span><i class="fa-solid fa-phone"></i>0800-333-111</span>
+        <div class="social-networks">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook-square"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-instagram-square"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa-brands fa-twitter-square"></i
+          ></a>
+        </div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.0832786451188!2d-4.460354450067608!3d40.184960077527286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4035b57551b6f3%3A0x84be095154d712f6!2sC.%20Falsa%2C%2045908%20Aldea%20en%20Cabo%2C%20Toledo%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1658432354254!5m2!1ses-419!2sar"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
   </body>
+  <footer id="footer">
+    <div class="navigation">
+      <h1>Navegación</h1>
+      <div class="navigation-links">
+        <a href="#hero"><span>Inicio</span></a>
+        <a href="#about-target-container"><span>Nosotros</span></a>
+        <a href="#products-container"><span>Productos</span></a>
+        <a href="#contact-us-container"><span>Contacto</span></a>
+      </div>
+    </div>
+    <div class="payments-footer">
+      <h1>Medios de pago</h1>
+      <div class="img-payments-footer">
+        <img src="payments-footer/icons8-visa.svg" alt="icon-visa" />
+        <img
+          src="payments-footer/icons8-mastercard.svg"
+          alt="icon-mastercard"
+        />
+        <img src="payments-footer/icons8-paypal.svg" alt="icon-paypal" />
+        <img src="payments-footer/icons8-efectivo-48.png" alt="icon-efectivo" />
+      </div>
+    </div>
+  </footer>
 </html>
